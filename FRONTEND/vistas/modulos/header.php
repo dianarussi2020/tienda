@@ -5,41 +5,20 @@
             <!-- Iconos redes sociales -->
             <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 social">
                 <ul>
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="fa fa-facebook redSocial facebookBlanco"
-                                aria-hidden="true">
-                            </i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="fa fa-youtube redSocial youtubeBlanco"
-                                aria-hidden="true">
-                            </i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="fa fa-twitter redSocial twitterBlanco"
-                                aria-hidden="true">
-                            </i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="fa fa-google-plus redSocial googleBlanco"
-                                aria-hidden="true">
-                            </i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <i class="fa fa-instagram redSocial instagramBlanco"
-                                aria-hidden="true">
-                            </i>
-                        </a>
-                    </li>
+                    <?php
+                    $social = ControladorPlantilla::ctrEstiloPlantilla();
+                    $jsonRedesSociales=json_decode($social["redesSociales"],true);
+                    foreach ($jsonRedesSociales as $key => $value) {
+                        #echo $value["url"];
+                        echo '<li>
+                            <a href="'.$value["url"].'" target="_blank">
+                                <i class="fa '.$value["red"].' redSocial '.$value["estilo"].'"
+                                    aria-hidden="true">
+                                </i>
+                            </a>
+                        </li>';
+                    }
+                    ?>
                 </ul>
             </div>
             <!-- Crear cuenta e ingresar -->
@@ -90,7 +69,7 @@
             <!-- 2.3 CARRITO DE COMPRAS  -->
             <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12" id="carrito">
                 <a href="#">
-                    <button class="btn btn-default pull-left backcolor">
+                    <button class="btn btn-default pull-left backColor">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </button>
                 </a>
