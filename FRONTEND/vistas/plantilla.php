@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="vistas/css/plugins/bootstrap.min.css">
     <!--Font Awesome 4.6.1 -->
     <link rel="stylesheet" href="vistas/css/plugins/font-awesome.min.css">
+    <link rel="stylesheet" href="vistas/css/plantilla.css">
+    <link rel="stylesheet" href="vistas/css/cabezote.css">
     <!--Font google APIS -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed">
