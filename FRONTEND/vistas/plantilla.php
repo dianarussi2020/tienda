@@ -7,6 +7,10 @@
         <meta name="description" content="Tienda virtual desarrollada con php">
         <meta name="keywords" content="">
         <title>Tienda virtual</title>
+        <?php
+        $icono = ControladorPlantilla::ctrEstiloPlantilla();
+        echo '<link rel="icon" href="../../BACKEND/'.$icono["icono"].'">';
+        ?>
         <!-- Hojas de estilo -->
         <!-- Bootstrap v3.3.7 -->
         <link rel="stylesheet" href="vistas/css/plugins/bootstrap.min.css">
