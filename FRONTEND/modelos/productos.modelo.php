@@ -6,7 +6,7 @@ class ModeloProductos{
         if($item !=null){
             $query = "SELECT * FROM $tabla WHERE $item=:$item";
             $stmt=Conexion::conectar()->prepare($query);
-            $stmt->bindParam(':',$item,$valor,PDO::PARAM_STR);
+            $stmt ->bindParam(":".$item , $valor , PDO::PARAM_STR);
             $stmt->execute();
             return $stmt->fetch();//fetch para devuelva una linea de info
         }else{
