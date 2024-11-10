@@ -9,17 +9,21 @@
         <title>Tienda virtual</title>
         <?php
         $icono = ControladorPlantilla::ctrEstiloPlantilla();
-        echo '<link rel="icon" href="../../BACKEND/'.$icono["icono"].'">';
+        
         /** Mantener la ruta fija del proyecto */ 
         $url = Ruta::ctrRuta();
+        $urlBackend = Ruta::ctrRutaBackend();
+        echo '<link rel="icon" href="'.$urlBackend.$icono["icono"].'">';
         ?>
         <!-- Hojas de estilo -->
         <!-- Bootstrap v3.3.7 -->
         <link rel="stylesheet" href=" <?php echo $url;?>vistas/css/plugins/bootstrap.min.css">
         <!--Font Awesome 4.6.1 -->
         <link rel="stylesheet" href=" <?php echo $url;?>vistas/css/plugins/font-awesome.min.css">
+        <!--Personalizadas -->
         <link rel="stylesheet" href=" <?php echo $url;?>vistas/css/plantilla.css">
         <link rel="stylesheet" href=" <?php echo $url;?>vistas/css/cabezote.css">
+        <link rel="stylesheet" href=" <?php echo $url;?>vistas/css/slide.css">
         <!--Font google APIS -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed">
@@ -61,6 +65,8 @@
             }else{
                 include "modulos/error404.php";
             }
+        }else{
+            include "modulos/slide.php";
         }
         ?>
         <!-- js personalizado -->

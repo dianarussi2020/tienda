@@ -38,8 +38,8 @@
         <div class="row" id="cabezote">
             <!-- 2.1 LOGOTIPO -->
             <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12" id="logotipo">
-                <a href="#">
-                    <img src="../../../BACKEND/<?php echo $social["logo"]; ?>"
+                <a href="<?php echo $url;?>">
+                    <img src="<?php echo $urlBackend;?><?php echo $social["logo"]; ?>"
                         class="img-responsive">
                 </a>
             </div>

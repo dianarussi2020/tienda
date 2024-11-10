@@ -4,4 +4,8 @@ class Ruta{
         //devuelve la url completa del proyecto
         return "http://localhost/tienda/FRONTEND/";
     }
+    static public function ctrRutaBackend(){
+        //devuelve la url completa del proyecto
+        return "http://localhost/tienda/BACKEND/";
+    }
 }
